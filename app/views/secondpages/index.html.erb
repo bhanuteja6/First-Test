@@ -1,0 +1,28 @@
+<h1>Listing secondpages</h1>
+
+<table>
+  <tr>
+    <th>Rollnumber</th>
+    <th>Classname</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @secondpages.each do |secondpage| %>
+  <tr>
+    <td><%= secondpage.rollnumber %></td>
+    <td><%= secondpage.classname %></td>
+    <td><%= link_to 'Show', secondpage %></td>
+    <td><%= link_to 'Edit', edit_secondpage_path(secondpage) %></td>
+    <td><%= link_to 'Destroy', secondpage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Details', final_secondpages_path %>
+
+
+<br />
+
+

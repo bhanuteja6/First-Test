@@ -1,0 +1,27 @@
+<center><h1> You have entered </h1>
+<table>
+<th>
+	<tr>	
+		<td><h4>Name<h4></td>
+	</tr>
+</th>
+
+<% @homebase.each do |f| %>
+	<tr>
+		<td><%= f.name %>
+		
+			
+			<%= f.collegename %>
+			
+			<%  @second = Secondpage.all(:conditions => {:homepage_id => f.id}) %>
+			<% @second.each do |b| %>
+			<td>
+			<%= b.rollnumber %>
+			<%= b.classname %>
+		</td>
+			<% end %> 
+	</tr>
+<% end %>
+<br/>
+</table>
+</center>

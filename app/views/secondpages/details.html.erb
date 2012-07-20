@@ -1,0 +1,21 @@
+<h1> Details you have entered are</h1>
+<p>
+	<b>Name :</b>
+	<% @homepage.name%>
+</p>
+
+<p>
+	<b>Collegename :</b>
+	<% @homepage.collegename%>
+</p>
+
+<p>
+	<b>Roll no :</b>
+	<% @secondpage.rollno%>
+</p>
+
+<p>
+	<b>Class :</b>
+	<% @secondpage.classname%>
+</p>
+<%= link_to 'Next', homepages_path , :controller => homepages, action => :index , :id => homepage.id %>

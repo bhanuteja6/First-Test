@@ -1,0 +1,26 @@
+<h1>Listing homepages</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Collegename</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @homepages.each do |homepage| %>
+  <tr>
+    <td><%= link_to homepage.name, :controller => :secondpages, :action => :new, :id => homepage.id %></td>
+    <td><%= homepage.collegename %></td>
+    <td><%= link_to 'Show', homepage %></td>
+    <td><%= link_to 'Edit', edit_homepage_path(homepage) %></td>
+    <td><%= link_to 'Destroy', homepage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Homepage', new_homepage_path %>
+<%#= link_to "next page",  new_secondpage_path %>

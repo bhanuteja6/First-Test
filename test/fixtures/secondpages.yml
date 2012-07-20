@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  rollnumber: 1
+  classname: MyString
+  homepage: 
+
+two:
+  rollnumber: 1
+  classname: MyString
+  homepage: 
